@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { ReactiveFormsModule } from "@angular/forms";
 import { HttpModule } from "@angular/http";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 import { SharedModule } from "../shared/shared.module";
 
@@ -16,6 +17,7 @@ import { CarFormComponent } from "./components/car-form/car-form.component";
         CommonModule,
         ReactiveFormsModule,
         HttpModule,
+        NgbModule,
         SharedModule,
     ],
     declarations: [

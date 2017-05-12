@@ -1,3 +1,14 @@
 <tool-header header="Car Tool"></tool-header>
-<car-table [cars]="cars" (onDeleteCar)="deleteCar($event)"></car-table>
-<car-form submitText="Create Car" (onSubmitCar)="createCar($event)"></car-form>
+
+<ngb-tabset>
+    <ngb-tab title="Car Table">
+        <ng-template ngbTabContent>
+            <car-table [cars]="cars" (onDeleteCar)="deleteCar($event)"></car-table>
+        </ng-template>
+    </ngb-tab>
+    <ngb-tab title="Car Form">
+        <ng-template ngbTabContent>
+            <car-form submitText="Create Car" (onSubmitCar)="createCar($event)"></car-form>
+        </ng-template>
+    </ngb-tab>
+</ngb-tabset>
