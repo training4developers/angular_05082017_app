@@ -1,0 +1,3 @@
+<tool-header header="Car Tool"></tool-header>
+<car-table [cars]="cars" (onDeleteCar)="deleteCar($event)"></car-table>
+<car-form submitText="Create Car" (onSubmitCar)="createCar($event)"></car-form>

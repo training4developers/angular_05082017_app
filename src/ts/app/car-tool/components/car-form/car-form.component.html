@@ -1,0 +1,36 @@
+<form novalidate [formGroup]="carForm" (ngSubmit)="submitForm()">
+
+    <div class="form-group">
+        <label for="make-input">Make</label>
+        <input type="text" id="make-input" class="form-control"
+            placeholder="Ford" formControlName="makeInput">
+    </div>
+
+    <div class="form-group">
+        <label for="model-input">Model</label>
+        <input type="text" id="model-input" class="form-control"
+            placeholder="Fusion" formControlName="modelInput">
+    </div>
+
+    <div class="form-group">
+        <label for="year-input">Year</label>
+        <input type="number" id="year-input" class="form-control"
+            placeholder="2014" formControlName="yearInput">
+    </div>
+
+    <div class="form-group">
+        <label for="color-input">Color</label>
+        <input type="color" id="color-input" class="form-control"
+            formControlName="colorInput">
+    </div>
+
+    <div class="form-group">
+        <label for="price-input">Price</label>
+        <input type="number" id="price-input" class="form-control"
+            placeholder="10000" formControlName="priceInput">
+    </div>
+
+    <button>{{submitText}}</button>
+    <button type="reset">Reset</button>
+
+</form>
