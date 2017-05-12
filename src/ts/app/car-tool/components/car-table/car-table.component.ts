@@ -10,6 +10,12 @@ import { Car } from "../../models/car";
 })
 export class CarTableComponent implements AfterViewInit, AfterViewChecked, OnDestroy {
 
+    @Input()
+    public cars: Car[] = [];
+
+    @Output()
+    public onDeleteCar = new EventEmitter<number>();
+
     private tableElement: JQuery;
     private exportTable: any;
 
@@ -25,10 +31,4 @@ export class CarTableComponent implements AfterViewInit, AfterViewChecked, OnDes
     public ngOnDestroy() {
         this.exportTable.remove();
     }
-
-    @Input()
-    public cars: Car[] = [];
-
-    @Output()
-    public onDeleteCar = new EventEmitter<number>();
 }
