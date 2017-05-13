@@ -33,7 +33,7 @@ module.exports = require('webpack-merge')(require('./webpack.common.js'), {
         // set minimize option for all loaders
         new webpack.LoaderOptionsPlugin({
             minimize: true
-        }),        
+        }),
         // minimizes javascript code
         new webpack.optimize.UglifyJsPlugin({
             sourceMap: true,
@@ -48,7 +48,8 @@ module.exports = require('webpack-merge')(require('./webpack.common.js'), {
         new webpack.DefinePlugin({
             'process.env': {
                 'ENV': JSON.stringify(ENV)
-            }
+            },
+            //REST_BASE_URL: JSON.stringify('http://cool.prodserver.flagstar.com'),
         })
     ]
 });

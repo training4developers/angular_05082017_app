@@ -31,7 +31,7 @@ module.exports = require('webpack-merge')(require('./webpack.common.js'), {
                 'ENV': JSON.stringify(ENV),
             },
             REST_BASE_URL: JSON.stringify('http://localhost:3010'),
-        }),        
+        }),
     ],
 
 });

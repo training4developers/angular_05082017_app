@@ -33,6 +33,14 @@
       "year": 2014,
       "color": "#FF0000",
       "price": 21000
+    },
+    {
+      "make": "Tata",
+      "model": "Indigo",
+      "year": 2014,
+      "color": "#aa2da5",
+      "price": 20000,
+      "id": 2
     }
   ],
   "owners": [

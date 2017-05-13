@@ -2,6 +2,8 @@ import { Component, Input, Output, EventEmitter, AfterViewInit, AfterViewChecked
 import * as $ from "jquery";
 import "tableexport";
 
+import { doAlert } from "./jeffs-rad-cool-jslib";
+
 import { Car } from "../../models/car";
 
 @Component({
@@ -18,6 +20,10 @@ export class CarTableComponent implements AfterViewInit, AfterViewChecked, OnDes
 
     private tableElement: JQuery;
     private exportTable: any;
+
+    public clickMe() {
+        doAlert();
+    }
 
     public ngAfterViewInit() {
         this.tableElement = $("table");

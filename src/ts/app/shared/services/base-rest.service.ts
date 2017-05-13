@@ -26,12 +26,14 @@ export abstract class BaseRESTService<T extends Model> {
     }
 
     public insert(model: T): Promise<T> {
-        return this.http.post(this.collectionUrl(), JSON.stringify(model), this.requestOptions)
+        return this.http.post(this.collectionUrl(),
+            JSON.stringify(model), this.requestOptions)
             .map( (res) => res.json() ).toPromise();
     }
 
     public update(model: T): Promise<T> {
-        return this.http.put(this.elementUrl(model.id), JSON.stringify(model), this.requestOptions)
+        return this.http.put(this.elementUrl(model.id),
+            JSON.stringify(model), this.requestOptions)
             .map( (res) => res.json() ).toPromise();
     }
 
